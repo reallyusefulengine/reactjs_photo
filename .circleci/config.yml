@@ -13,9 +13,9 @@ jobs:
       - run: mkdir -p my_workspace
       - run: echo "trying out workspace" > my_workspace/echo-output
       - persist_to_workspace:
-        root: my_workspace
-        paths:
-          - echo-workspace
+          root: my_workspace
+          paths:
+            - echo-workspace
 
   two:
     docker:
