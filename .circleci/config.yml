@@ -25,8 +25,8 @@ jobs:
       - checkout
       - run: echo "hello world two"
       - attach_workspace
-        at: my_workspace
-          - run: echo "test"
+          at: my_workspace
+      - run: echo "test"
 
 workflows:
   version: 2
