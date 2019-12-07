@@ -10,6 +10,12 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world one"
+      - run: mkdir -p my_workspace
+      - run: echo "trying out workspace" > my_workspace/echo-output
+      - persist-to-workspace:
+        root: my_workspace
+        paths:
+          - echo-workspace
 
   two:
     docker:
@@ -18,6 +24,8 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world two"
+      - attach-workspace
+        at: my_workspace
 
 workflows:
   version: 2
