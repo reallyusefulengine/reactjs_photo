@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  one:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -18,7 +18,24 @@ jobs:
 
     steps:
       - checkout
-      - run: echo "hello world"
+      - run: echo "hello world one"
+
+
+  two:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    # working_directory: ~/reactjs_photo/photo
+
+    steps:
+      - checkout
+      - run: echo "hello world two"
       # - run: mkdir -p my_workspace
       # - persist_to_workspace:
       #     root: my_workspace
