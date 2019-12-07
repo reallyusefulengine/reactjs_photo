@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world two"
-      attach_workspace:
+      - attach_workspace:
           at: my_workspace
       - run: echo "test"
 
