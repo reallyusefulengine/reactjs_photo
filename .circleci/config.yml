@@ -26,6 +26,7 @@ jobs:
       - run: echo "hello world two"
       - attach_workspace
         at: my_workspace
+          - run: echo "test"
 
 workflows:
   version: 2
