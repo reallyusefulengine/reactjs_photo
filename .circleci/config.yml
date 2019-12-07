@@ -18,6 +18,11 @@ jobs:
 
     steps:
       - checkout
+      - run: mkdir -p my_workspace
+      - persist_to_workspace:
+          root: my_workspace
+          paths:
+            - echo-output 
 
       # Download and cache dependencies
       - restore_cache:
